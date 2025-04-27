@@ -79,7 +79,7 @@ object coctelSuave {
 
 object coctel {
     const bebidas = []
-    
+
     method agregarBebida(unaBebida) {
         bebidas.add(unaBebida)
     }
@@ -90,6 +90,7 @@ object coctel {
 
     method rendimiento(cantidad){
         var bebidasRendimiento = 1
-        bebidas.forEach({e => bebidasRendimiento *= e.rendimiento(cantidad)})
+        bebidas.forEach{e => bebidasRendimiento *= e.rendimiento(cantidad)}
+        return bebidasRendimiento
     } 
 }
